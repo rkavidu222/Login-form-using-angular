@@ -1,0 +1,78 @@
+<section  >
+    <div  >
+      <div >
+        <div >
+
+
+
+          <div >
+
+            @if(isLoginView) {
+                <form >
+
+                    <h3>Log in</h3>
+
+                    <div >
+                      <input name="userName" [(ngModel)]="userLogin.userName" type="email" >
+
+                      <label>User Name</label>
+
+                    </div>
+
+                    <div >
+                      <input name="password" [(ngModel)]="userLogin.password" type="password" >
+                      <label >Password</label>
+
+                    </div>
+
+                    <div >
+                      <button  (click)="onLogin()" type="button">Login</button>
+                    </div>
+
+
+
+                    <p>Don't have an account? <a (click)="isLoginView = false "><b><u>Register here</u></b></a></p>
+
+                  </form>
+            } @else {
+                <form >
+
+                    <h3 >Register</h3>
+
+                    <div >
+                      <input name="emailId" [(ngModel)]="userRegisterObj.emailId" type="email" >
+                      <label class="form-label" >Email address</label>
+
+                    </div>
+                    <div >
+                        <input name="userName" [(ngModel)]="userRegisterObj.userName" type="email" >
+                        <label >User Name</label>
+
+
+                      </div>
+
+                    <div >
+                      <input name="password" [(ngModel)]="userRegisterObj.password" type="password" >
+                      <label >Password</label>
+
+                    </div>
+
+                    <div >
+                      <button (click)="onRegister()" type="button">Register</button>
+                    </div>
+
+
+                    <p>Don't have an account? <a (click)="isLoginView = true"><b><u>Login here</u></b></a></p>
+
+                  </form>
+            }
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
